@@ -1,0 +1,17 @@
+.ministries{
+    width: 100%;
+    margin-top: 90px;
+}
+
+.ministry-btn{
+    width:200px;
+}
+
+.register-ministry{
+    width:400px;
+    background-color: #fff;
+}
+
+.ministry-inputs, .ministry-reg-btn{
+    width:100%;
+}

@@ -1,0 +1,38 @@
+.homeabout{
+    width:100%;
+}
+
+.homeabout-left{
+    width:50%;
+}
+
+.homeabout-left img{
+    width:450px;
+    height:350px;
+    overflow: hidden;
+    object-fit: cover;
+}
+
+.homeabout-right{
+    width:50%;
+}
+
+@media screen and (max-width:1227px){
+    .homeabout-wrapper{
+        flex-direction: column;
+    }
+
+    .homeabout-left {
+        width: 95%;
+    }
+
+
+    .homeabout-left img {
+        width: 100%;
+    }
+
+    .homeabout-right {
+        width: 95%;
+        margin-top: 10px;
+    }
+}

@@ -1,0 +1,17 @@
+.biblestudy{
+    width:100%;
+}
+
+.bible-inputs{
+    width:80%;
+}
+
+.reg-btn{
+    width: 80%;
+}
+
+@media screen and (max-width:630px){
+.bible-inputs, .reg-btn {
+    width: 95%;
+}
+}

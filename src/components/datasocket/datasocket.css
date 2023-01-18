@@ -1,0 +1,21 @@
+.datasocket{
+    width:100%;
+    background-color: #F8F9FC;
+}
+
+.data-container{
+    width:200px;
+    height:150px;
+}
+
+@media screen and (max-width:1025px){
+    .data-container {
+        width: 300px;
+        height: 200px;
+        margin-bottom: 10px;
+        }
+    .data-cont-wrapper{
+        width:95%;
+        justify-content: center;
+    }
+}

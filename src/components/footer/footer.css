@@ -1,0 +1,56 @@
+.footer{
+    width:100%;
+}
+
+.footer-left{
+    width:50%;
+}
+
+.footer-right{
+    width:50%;
+}
+
+.subscribe-inputs{
+    width:70%;
+}
+
+.subscribe-btn{
+    width: 70%;
+}
+
+@media screen and (max-width:772px){
+    .footer-wrapper{
+        flex-direction: column;
+        justify-content: center;
+    }
+
+.footer-left {
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #fff;
+}
+
+.footer-right {
+    width: 95%;
+    margin-top: 10px;
+}
+
+.sub-title{
+    text-align: center;
+}
+
+.footer-sub{
+    align-items: center;
+}
+
+.subscribe-inputs {
+    width: 95%;
+}
+
+.subscribe-btn {
+    width: 95%;
+}
+}

@@ -1,0 +1,52 @@
+.ministry-data{
+    width:100%;
+}
+
+.single-ministry{
+    width:100%;
+    margin-bottom: 20px;
+}
+
+.single-ministry:nth-child(2n){
+    flex-direction: row-reverse;
+}
+
+
+
+.ministry-left{
+    width:50%;
+    height:50vh;
+}
+
+.ministry-left img{
+    width:80%;
+    height:40vh;
+    object-fit: cover;
+}
+
+.ministry-right {
+    width: 50%;
+}
+
+@media screen and (max-width:1025px){
+
+    .single-ministry:nth-child(2n) {
+            flex-direction: column-reverse;
+        }
+    .single-ministry{
+        flex-direction: column-reverse;
+        width:95%;
+    }
+
+    .ministry-left {
+        width: 100%;
+    }
+
+        .ministry-left img {
+            width:100%;
+        }
+
+    .ministry-right {
+        width: 100%;
+    }
+}

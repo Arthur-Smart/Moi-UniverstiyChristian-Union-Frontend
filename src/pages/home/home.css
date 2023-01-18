@@ -1,0 +1,44 @@
+.home{
+    position: relative;
+    width:100%;
+    margin-top: 90px;
+}
+
+.modal{
+    position: fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100vh;
+    background-color: rgba(0, 0, 0, 0.74);
+   transition: all ease .5s;
+}
+
+.show-modal{
+    display: flex;
+}
+
+.title-holder{
+    border-bottom: 1px solid rgba(0, 0, 0, 0.315);
+}
+
+.sunday{
+    width:400px;
+    overflow: hidden;
+}
+
+.weekly{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.74);
+    transition: all ease .5s;
+}
+
+@media screen and (max-width:500px){
+    .sunday {
+        width: 95%;
+    }
+}

@@ -1,0 +1,40 @@
+.homelibrary{
+    width:100%;
+    background-color: #F8F9FC;
+}
+
+.lib-title{
+    margin-top: -100px;
+}
+
+.lib-container{
+    width:30%;
+    background-color: white;
+}
+
+.lib-btn{
+    width:90%;
+}
+
+@media screen and (max-width:1050px){
+    
+    .home-l-wrapper{
+        justify-content: center;
+    }
+    
+    .lib-container{
+        width:70%;
+        margin-bottom: 10px;
+    }
+}
+
+@media screen and (max-width:920px){
+
+    .lib-title {
+            margin-top: 0;
+        }
+
+    .lib-container {
+    width: 95%;
+ }
+}

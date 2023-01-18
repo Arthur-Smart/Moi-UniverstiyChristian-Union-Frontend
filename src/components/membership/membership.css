@@ -1,0 +1,14 @@
+.membership{
+    width:100%;
+}
+
+.membership-text-container{
+    width:100%;
+    background-color: #F8F9FC;
+}
+
+@media screen and (max-width:700px){
+.membership-text-container{
+    width:95%;
+}
+}

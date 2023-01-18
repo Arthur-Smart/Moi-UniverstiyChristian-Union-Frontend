@@ -1,0 +1,21 @@
+.aboutstatement{
+    width:100%;
+}
+
+.statement-container{
+width:30%;
+height:30vh;
+background-color: #F8F9FC;
+}
+
+@media screen and (max-width:1024px){
+.statement-container{
+    width:70%;
+}
+}
+
+@media screen and (max-width:800px) {
+    .statement-container {
+        width: 95%;
+    }
+}

@@ -1,0 +1,14 @@
+.eventsfacts{
+    width:100%;
+}
+
+.single-event-desc{
+    width: 100%;
+    background-color: #F8F9FC;
+}
+
+@media screen and (max-width:700px) {
+    .single-event-desc {
+        width: 95%;
+    }
+}

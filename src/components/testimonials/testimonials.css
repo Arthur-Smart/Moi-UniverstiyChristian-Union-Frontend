@@ -1,0 +1,43 @@
+.testimonials{
+    width:100%;
+}
+
+.testimonial-cont{
+    position: relative;
+    height:45vh;
+    width:30%;
+    overflow:hidden;
+}
+
+.animation-tab{
+    width:101%;
+    height:30px;
+    position: absolute;
+    bottom:0;
+    transform:translateY(30px);
+    transition:all ease .4s;
+}
+
+.testimonial-cont:hover .animation-tab{
+    transform: translateY(0px);
+}
+
+.testimonial-cont img{
+    width:100px;
+    height:100px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+@media screen and (max-width:1050px){
+.testimonials-wrapper{
+    justify-content: center;
+}
+
+}
+
+@media screen and (max-width:770px){
+    .testimonial-cont {
+            width: 95%;
+        }
+}

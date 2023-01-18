@@ -1,0 +1,47 @@
+.ex-official{
+    width:100%;
+}
+
+.leader-container{
+    position: relative;
+    width:30%;
+    height:40vh;
+    overflow:hidden;
+}
+
+.leader-container:hover.leader-container::before{
+    content:'';
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background-color: rgba(0, 0, 0, 0.507);
+}
+
+.leader-container img{
+    width:100%;
+    height:100%;
+    object-fit: cover;
+}
+
+.name-container{
+    position: absolute;
+    left:0;
+    bottom:10%;
+    width:60%;
+    border-top-right-radius: 7px;
+    border-bottom-right-radius: 7px;
+}
+
+@media screen and (max-width:1024px) {
+    .leader-container {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width:800px) {
+    .leader-container {
+        width: 95%;
+    }
+}

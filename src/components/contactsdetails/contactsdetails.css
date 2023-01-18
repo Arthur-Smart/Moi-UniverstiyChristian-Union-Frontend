@@ -1,0 +1,85 @@
+.contacts-details{
+    width:100%;
+}
+
+.contact-left{
+    width:50%;
+}
+
+.contact-left form{
+    width:90%;
+}
+
+.input-wrapper{
+    width:45%;
+}
+
+.contact-inputs{
+    width:100%;
+}
+
+.textarea-container{
+    width:90%;
+}
+
+.textarea-container textarea{
+    width:100%;
+    max-width: 100%;
+    min-width: 100%;
+    height:40vh;
+    max-height: 20vh;
+    min-height: 20vh;
+}
+
+.contact-btn{
+    width:90%;
+}
+
+.contact-right {
+    width: 50%;
+}
+
+@media screen and (max-width:1048px){
+    .contacts-wrapper{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+        .contact-left {
+            width: 95%;
+        }
+
+                .contact-left form {
+                    width: 100%;
+                    justify-content: center;
+                }
+        
+                .input-wrapper {
+                    width: 100%;
+                }
+
+        .contact-right {
+            width: 95%;
+            margin-top: 10px;
+        }
+}
+
+@media screen and (max-width:655px){
+    .inputs-wrapper{
+        flex-direction: column;
+        width:95%;
+    }
+
+    .input-wrapper {
+        width: 100%;
+    }
+
+    .textarea-container {
+        width: 95%;
+    }
+
+    .contact-btn {
+        width: 95%;
+    }
+}

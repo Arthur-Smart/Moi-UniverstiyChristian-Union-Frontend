@@ -1,0 +1,32 @@
+.program{
+    width:100%;
+}
+
+.program-left{
+    width:47%;
+}
+
+.video-container{
+    width:90%;
+    height:24vh;
+    background-color: #fff;
+}
+
+.program-right{
+    width:47%;
+}
+
+@media screen and (max-width:1025px){
+    .program-p-wrapper{
+        flex-direction: column;
+    }
+
+    .program-left {
+        width: 95%;
+    }
+
+    .program-right {
+        width: 95%;
+        margin-top: 10px;
+    }
+}

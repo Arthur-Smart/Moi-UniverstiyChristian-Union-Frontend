@@ -1,0 +1,40 @@
+.admin {
+    width: 100%;
+    margin-top: 90px;
+}
+
+.registered-members{
+    width:100%;
+}
+
+.appointments-made{
+    width:100%;
+}
+
+.service-video{
+    width:100%;
+}
+
+.create-article{
+    width:400px;
+    background-color: #fff;
+}
+
+.publish-input{
+    width:100%;
+}
+
+.publish-textarea{
+    width:100%;
+    max-width: 100%;
+    min-width: 100%;
+    height:20vh;
+    max-height:20vh;
+    min-height:20vh;
+}
+
+@media screen and (max-width:860px){
+    .registered-members, .appointments-made, .create-article, .created-articles {
+        width: 95%;
+    }
+}
