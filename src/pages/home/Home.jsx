@@ -10,13 +10,47 @@ import Program from "../../components/program/Program";
 import ServicePrograms from "../../components/serviceprograms/ServicePrograms";
 import Testimonials from "../../components/testimonials/Testimonials";
 import Updates from "../../components/updates/Updates";
+import { v4 as uuidv4 } from "uuid";
+import { axiosInstance } from "../../config";
 import "./home.css";
 
 function Home() {
   const [showModal, setShowModal] = useState(false);
   const [showWeeklyModal, setShowWeeklyModal] = useState(false);
   const [topicModal, setTopicModal] = useState(false);
+  const [email, setEmail] = useState("");
   const [topic, setTopic] = useState("");
+  const [success, setSuccess] = useState(false);
+  const [successText, setSuccessText] = useState("");
+
+  const [error, setError] = useState(false);
+  const [errorText, setErrorText] = useState("");
+
+  const handleSubmitTopic = async () => {
+    try {
+      if (topic === "" || email === "")
+        alert("Please enter a topic and email.");
+      const { data } = await axiosInstance.post("api/topic/", {
+        email,
+        topic,
+      });
+      setSuccessText(data);
+      setSuccess(true);
+      setEmail("");
+      setTopic("");
+    } catch (error) {
+      setError(true);
+      setErrorText(error.response.data);
+    }
+  };
+
+  setTimeout(() => {
+    setSuccess(false);
+  }, 5000);
+
+  setTimeout(() => {
+    setError(false);
+  }, 5000);
 
   return (
     <div className="home">
@@ -42,15 +76,36 @@ function Home() {
             <p className="font-semibold text-gray-600 mb-2">
               What is in your heart?
             </p>
+            <input
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              className="user-email border-gray-200 p-2 rounded-md mb-4"
+              type="email"
+              placeholder="Enter your email"
+            />
             <textarea
               value={topic}
               className="topic__textarea border-gray-200 p-2 rounded-md"
               placeholder="Please type ..."
               onChange={(e) => setTopic(e.target.value)}
             ></textarea>
-            <button className="bg-amber-500 py-2 px-4 rounded-md text-white hover:bg-amber-600">
+            <button
+              onClick={() => handleSubmitTopic()}
+              className="bg-amber-500 py-2 px-4 rounded-md text-white hover:bg-amber-600"
+            >
               Submit <i class="fa-solid fa-paper-plane"></i>
             </button>
+            {success && (
+              <div className="bg-lime-500 mt-2 py-2 px-3 rounded-md ">
+                <p className="text-center text-white">{successText}</p>
+              </div>
+            )}
+
+            {error && (
+              <div className="bg-red-500 mt-2 py-2 px-3 rounded-md ">
+                <p className="text-center text-white">{errorText}</p>
+              </div>
+            )}
           </div>
         </div>
       )}
