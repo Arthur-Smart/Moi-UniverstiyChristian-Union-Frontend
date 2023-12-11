@@ -18,13 +18,13 @@
 
 .logo img{
     width:50px;
-    height:50sssssspx;
+    height:50px;
     object-fit:cover;
 }
 
 .top-nav{
-    height:35px;
-    border-bottom: 1px solid gray;
+    height:37px;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.486);
 }
 
 .bottom-nav{
@@ -38,6 +38,10 @@
 
 .nav-btns{
     flex:1;
+}
+
+.admin-btn{
+    border-width: 1px;
 }
 
 .nav-links p{

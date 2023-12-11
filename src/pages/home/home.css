@@ -37,6 +37,42 @@
     transition: all ease .5s;
 }
 
+.topic-pop__up{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:50px;
+    background-color: #B0EEB0;
+    z-index:10;
+}
+
+.topic-modal{
+    position: fixed;
+    top:0;
+    height:0;
+    width:100vw;
+    height:100vh;
+    z-index:10000;
+    background-color: rgba(0, 0, 0, 0.658);
+}
+
+.modal_field{
+    width: clamp(360px, 50%, 600px);
+    margin:0;
+}
+
+.topic__textarea{
+    border-width:1px;
+    width:100%;
+    min-width:100%;
+    max-width:100%;
+    height:10vh;
+    min-height:10vh;
+    max-height:10vh;
+    outline: none;
+}
+
 @media screen and (max-width:500px){
     .sunday {
         width: 95%;

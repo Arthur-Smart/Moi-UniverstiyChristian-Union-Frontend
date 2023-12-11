@@ -10,10 +10,10 @@ function DataSocket() {
     <div className='datasocket py-10 flex flex-col py-4 items-center justify-center'>
         <p className='text-center text-xl font-medium  text-gray-600'>Some facts about us</p>
         <Tab/>
-        <ScrollTrigger className='container'  onEnter={() => setCounterOn(true)} onExit={() => setCounterOn(false)}>
-        <div   className='container  data-cont-wrapper mt-4 flex flex-wrap items-center justify-between'>
+        <ScrollTrigger className='container flex items-center justify-center'  onEnter={() => setCounterOn(true)} onExit={() => setCounterOn(false)}>
+        <div   className='container gap-2 data-cont-wrapper mt-4 flex flex-wrap items-center justify-between'>
             {counterOn && 
-            <div className='data-container rounded-md flex flex-col items-center justify-center bg-slate-200'>
+            <div className='data-container rounded-md flex flex-col items-center justify-center  bg-slate-200'>
                  <p  className='font-bold text-5xl  text-gray-600'>               
                   <CountUp start={0} end={1200} duration={2} delay={0}/>               
                 </p>                
@@ -23,7 +23,7 @@ function DataSocket() {
             {counterOn && 
             <div className='data-container rounded-md flex flex-col items-center justify-center bg-green-700'>
                 <p className='font-bold text-5xl text-white'>
-                    <CountUp start={0} end={15} duration={2} delay={0}/>
+                    <CountUp start={0} end={9} duration={2} delay={0}/>
                 </p>
                 <p className='text-white font-medium'>Number of Bible study</p>
             </div>
@@ -39,9 +39,9 @@ function DataSocket() {
             {counterOn && 
             <div className='data-container rounded-md flex flex-col items-center justify-center bg-slate-200'>
                 <p className='font-bold text-5xl  text-gray-600'>
-                    <CountUp start={0} end={5} duration={4} delay={0}/>
+                    <CountUp start={0} end={2} duration={4} delay={0}/>
                 </p>
-                <p className='font-medium text-gray-600'>Projects work in progress</p>
+                <p className='font-medium text-gray-600'>Projects  in progress</p>
             </div>
             }
         </div>

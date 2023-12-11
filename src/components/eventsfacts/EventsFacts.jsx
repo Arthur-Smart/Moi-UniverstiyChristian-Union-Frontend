@@ -42,8 +42,7 @@ function EventsFacts() {
                 <p className='font-medium text-xl text-slate-500' >Food bank sunday</p>
                 <p>This is the day that is dedicated we may assist those in need amongst us. People give food stuffs , money, clothings and any tangible item that could be of help to the congregation. These things are not all given out on that day, but some are kept with the directives of the vice chair(now this becomes Food Bank) for any need that may arise</p>
             </div>
-            <p className='mt-3 text-center px-4'>You can support our events. You can as well make your tithing and give your offering online</p>
-            <button className='py-2 px-4 bg-red-600 hover:bg-red-700 text-white rounded-md'>Give</button>
+            
         </div>
     </div>
   )

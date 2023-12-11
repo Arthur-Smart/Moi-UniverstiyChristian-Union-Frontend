@@ -27,7 +27,7 @@ export const officialData = [
         id:5,
         name:'Joseph Bauhinja',
         image:require('../../assets/joseph.jpg'),
-        position:'Outreach subcommittee Chairperso'
+        position:'Outreach subcommittee Chairperson'
     },
     {
         id:6,
@@ -55,7 +55,7 @@ export const officialData = [
     },
    {
         id:10,
-        name:'Esther Wnagari',
+        name:'Esther Wangari',
         image:require('../../assets/wangari.jpg'),
         position:'Tresurer'
     },

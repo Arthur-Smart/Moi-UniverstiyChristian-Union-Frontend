@@ -23,11 +23,11 @@ function Footer() {
         <div className='container footer-wrapper flex  justify-between'>
             <div className='footer-left'>
                 <p className='text-white font-medium text-xl'>Unity in Christ </p>
-                <p className='text-white'>Phone: 0786948594 | muaccu@gmail.com</p>
+                <p className='text-white'>Phone: 0111995666 | muaccu@gmail.com</p>
                 <div className='flex items-center'>
                     <a href='https://web.facebook.com/groups/371798379566643/?_rdc=1&_rdr' target='_blank'><p className='cursor-pointer text-white text-xl ' ><i class="fa-brands fa-square-facebook hover:text-red-600"></i></p></a>
                     <a href='https://web.facebook.com/groups/371798379566643/?_rdc=1&_rdr' target='_black'><p className='cursor-pointer text-white text-xl ml-2 ' ><i class="fa-brands fa-square-instagram hover:text-red-600"></i></p></a>
-                    <a href='https://www.youtube.com/channel/UCN36ijLsLBm5uCqBZNZ9Hcg/videos' target='_blank'><p className='cursor-pointer text-white text-xl ml-2 ' ><i class="fa-brands fa-square-youtube hover:text-red-600"></i></p></a>
+                    <a href='https://youtube.com/@muaccucu364' target='_blank'><p className='cursor-pointer text-white text-xl ml-2 ' ><i class="fa-brands fa-square-youtube hover:text-red-600"></i></p></a>
                 </div>
             </div>
             <div className='footer-right flex flex-col'>

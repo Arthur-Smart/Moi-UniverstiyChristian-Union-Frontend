@@ -2,6 +2,10 @@ import React from 'react'
 import {Link} from 'react-router-dom'
 import './singleblog.css'
 
+let getDate = (article) => {
+  return new Date(article.createdAt).toLocaleDateString()
+}
+
 function SingleBlog({article}) {
   return (
     <div className='single-blog container flex  justify-between mb-4 p-2 rounded-md'>
@@ -12,7 +16,7 @@ function SingleBlog({article}) {
             <p className='font-bold text-slate-600 text-lg'>{article.title}</p>
             <p className='article-desc'>{article.description}</p>
           <Link to={`/article/${article._id}`}> <button className='border-2 py-2 px-4 font-medium rounded-md hover:bg-green-700 hover:text-white'>Read more</button></Link>
-            <p className='mt-2 font-medium'>Post: {article.createdAt}</p>
+            <p className='mt-2 font-medium'><strong>Posted On:</strong> {getDate(article)}</p>
         </div>
     </div>
   )

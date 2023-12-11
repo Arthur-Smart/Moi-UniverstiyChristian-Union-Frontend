@@ -20,7 +20,6 @@ const ContextProvider = ({children}) =>{
   }
 
   const LogoutAdmin = () => {
-    console.log('Ayeya')
     localStorage.removeItem('user')
     window.location.replace('/login')
   }
