@@ -24,6 +24,14 @@
     width:100%;
 }
 
+.topics{
+    width:100%;
+}
+
+.ref_btns{
+    border-width:1px;
+}
+
 .publish-textarea{
     width:100%;
     max-width: 100%;
