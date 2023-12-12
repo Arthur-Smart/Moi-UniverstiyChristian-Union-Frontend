@@ -14,6 +14,7 @@
     "aos": "^2.3.4",
     "axios": "^1.2.2",
     "firebase": "^9.15.0",
+    "framer-motion": "^10.16.16",
     "number-counter": "^1.0.3",
     "react": "^18.2.0",
     "react-animated-modal": "^1.1.1",

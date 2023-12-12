@@ -58,7 +58,7 @@
 }
 
 .modal_field{
-    width: clamp(360px, 50%, 600px);
+    width: clamp(340px, 50%, 600px);
     margin:0;
 }
 

@@ -10,11 +10,17 @@ const UsersTopic = ({ topics }) => {
   };
 
   const columns = [
-    { field: "_id", headerName: "ID", width: 100 },
+    { field: "_id", headerName: "ID", width: 90 },
+    {
+      field: "speaker",
+      headerName: "Speakers",
+      width: 200,
+      editable: true,
+    },
     {
       field: "topic",
       headerName: "Topics",
-      width: 1000,
+      width: 750,
       editable: true,
     },
 
@@ -22,7 +28,7 @@ const UsersTopic = ({ topics }) => {
       field: "delete",
       headerName: "Delete member",
       sortable: false,
-      width: 200,
+      width: 100,
       renderCell: (params) => {
         return (
           <button

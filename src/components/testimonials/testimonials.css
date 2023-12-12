@@ -4,9 +4,10 @@
 
 .testimonial-cont{
     position: relative;
-    height:45vh;
+    height:46vh;
     width:30%;
     overflow:hidden;
+    border-width:1px;
 }
 
 .animation-tab{

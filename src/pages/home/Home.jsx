@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Appointment from "../../components/appointment/Appointment";
 import Article from "../../components/article/Article";
 import BibleStudy from "../../components/biblestudy/BibleStudy";
@@ -10,7 +10,6 @@ import Program from "../../components/program/Program";
 import ServicePrograms from "../../components/serviceprograms/ServicePrograms";
 import Testimonials from "../../components/testimonials/Testimonials";
 import Updates from "../../components/updates/Updates";
-import { v4 as uuidv4 } from "uuid";
 import { axiosInstance } from "../../config";
 import "./home.css";
 
@@ -20,29 +19,44 @@ function Home() {
   const [topicModal, setTopicModal] = useState(false);
   const [email, setEmail] = useState("");
   const [topic, setTopic] = useState("");
+  const [speaker, setSpeaker] = useState("");
   const [success, setSuccess] = useState(false);
   const [successText, setSuccessText] = useState("");
 
   const [error, setError] = useState(false);
   const [errorText, setErrorText] = useState("");
+  const [isEnabled, setIsEnabled] = useState(true);
 
   const handleSubmitTopic = async () => {
     try {
-      if (topic === "" || email === "")
-        alert("Please enter a topic and email.");
-      const { data } = await axiosInstance.post("api/topic/", {
-        email,
-        topic,
-      });
-      setSuccessText(data);
-      setSuccess(true);
-      setEmail("");
-      setTopic("");
+      if (topic === "" || email === "" || speaker === "") {
+        alert("Please enter a topic, email and speaker.");
+      } else {
+        const { data } = await axiosInstance.post("api/topic/", {
+          email,
+          topic,
+          speaker,
+        });
+        setSuccessText(data);
+        setSuccess(true);
+        setEmail("");
+        setTopic("");
+        setSpeaker("");
+      }
     } catch (error) {
       setError(true);
       setErrorText(error.response.data);
     }
   };
+
+  // Check if topic modal is enabled
+  useEffect(() => {
+    const enableStatus = async () => {
+      const enabled = await axiosInstance.get("/api/enabled");
+      setIsEnabled(enabled.data.isEnabled);
+    };
+    enableStatus();
+  }, []);
 
   setTimeout(() => {
     setSuccess(false);
@@ -54,17 +68,20 @@ function Home() {
 
   return (
     <div className="home">
-      <div
-        onClick={() => setTopicModal(true)}
-        className="topic-pop__up flex items-center justify-center px-4 cursor-pointer"
-      >
-        <div className="container flex items-center justify-center">
-          <p className="text-center underline">
-            Click here to let us know the topic you'd like to be preached next
-            semester <i class="fa-solid fa-face-smile text-yellow-500"></i>
-          </p>
+      {isEnabled === true && (
+        <div
+          onClick={() => setTopicModal(true)}
+          className="topic-pop__up flex items-center justify-center px-4 cursor-pointer"
+        >
+          <div className="container flex items-center justify-center">
+            <p className="text-center underline">
+              Click here to let us know the topic you'd like to be preached next
+              semester <i class="fa-solid fa-face-smile text-yellow-500"></i>
+            </p>
+          </div>
         </div>
-      </div>
+      )}
+
       {/*Modal  */}
       {topicModal && (
         <div className="topic-modal flex items-center justify-center">
@@ -86,9 +103,16 @@ function Home() {
             <textarea
               value={topic}
               className="topic__textarea border-gray-200 p-2 rounded-md"
-              placeholder="Please type ..."
+              placeholder="Please type topic..."
               onChange={(e) => setTopic(e.target.value)}
             ></textarea>
+            <input
+              value={speaker}
+              onChange={(e) => setSpeaker(e.target.value)}
+              className="user-email border-gray-200 p-2 rounded-md mb-4"
+              type="text"
+              placeholder="Speaker's name"
+            />
             <button
               onClick={() => handleSubmitTopic()}
               className="bg-amber-500 py-2 px-4 rounded-md text-white hover:bg-amber-600"

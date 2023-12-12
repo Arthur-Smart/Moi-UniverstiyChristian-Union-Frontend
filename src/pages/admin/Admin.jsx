@@ -98,6 +98,39 @@ function Admin() {
     getTopics();
   }, [topics]);
 
+  // Enable Topic modal
+  const [isEnabled, setIsEnabled] = useState(false);
+
+  useEffect(() => {
+    const savedEnabledStatus = localStorage.getItem("isEnabled");
+    if (savedEnabledStatus !== null) {
+      setIsEnabled(savedEnabledStatus === "true");
+    } else {
+      fetchEnabledStatus();
+    }
+  }, []);
+
+  const fetchEnabledStatus = async () => {
+    try {
+      const response = await axios.get("/api/enabled");
+      setIsEnabled(response.data.isEnabled);
+      localStorage.setItem("isEnabled", response.data.isEnabled);
+    } catch (error) {
+      console.error("Error fetching status:", error);
+    }
+  };
+
+  const handleToggle = async () => {
+    try {
+      const newValue = !isEnabled;
+      setIsEnabled(newValue);
+      await axiosInstance.post("/api/enabled", { isEnabled: newValue });
+      localStorage.setItem("isEnabled", newValue);
+    } catch (error) {
+      console.error("Error toggling status:", error);
+    }
+  };
+
   const createArticle = async () => {
     const articleData = {
       title,
@@ -257,7 +290,11 @@ function Admin() {
               <Tab />
             </div>
             <div className="flex">
-              <input type="checkbox" />
+              <input
+                type="checkbox"
+                checked={isEnabled}
+                onChange={handleToggle}
+              />
               <p className="ml-3 text-blue-600 font-semibold">
                 Activate topic modal
               </p>
